@@ -2,8 +2,8 @@
 
 Ce fichier déclenche un redéploiement Vercel.
 
-**Date:** 12 novembre 2025
-**Commit:** Force déploiement des 3 nouvelles pages diplômes
+**Date:** 12 novembre 2025 - Webhook réparé ✅
+**Commit:** Test après reconnexion GitHub-Vercel
 
 ## Pages ajoutées :
 - ✨ Diplôme SeaTech général
@@ -12,4 +12,5 @@ Ce fichier déclenche un redéploiement Vercel.
 
 ## Status :
 - GitHub Pages : ❌ Désactivé
-- Vercel : ✅ Actif (déploiement forcé)
+- Vercel : ✅ Webhook reconnecté - Test en cours
+- Repository : 🔄 Reconnecté avec succès
