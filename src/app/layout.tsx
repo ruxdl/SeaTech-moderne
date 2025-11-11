@@ -42,7 +42,7 @@ export default function RootLayout({
                 <div className="flex flex-col items-center">
                   <Link href="/">
                     <img 
-                      src="/images/logos/logoseatech\.png" 
+                      src="/images/logos/logoseatech.png" 
                       alt="SeaTech" 
                       className="h-8 w-auto mb-2"
                     />
@@ -51,14 +51,14 @@ export default function RootLayout({
                   <div className="flex space-x-2">
                     <Link href="https://www.grenoble-inp.fr" target="_blank" rel="noopener noreferrer">
                       <img 
-                        src="/images/logos/grenobleinp\.png" 
+                        src="/images/logos/grenobleinp.png" 
                         alt="Grenoble INP" 
                         className="h-6 w-auto hover:opacity-80 transition-opacity"
                       />
                     </Link>
                     <Link href="https://www.groupe-inp.fr" target="_blank" rel="noopener noreferrer">
                       <img 
-                        src="/images/logos/groupeinp\.png" 
+                        src="/images/logos/groupeinp.png" 
                         alt="Groupe INP" 
                         className="h-6 w-auto hover:opacity-80 transition-opacity"
                       />
@@ -67,7 +67,7 @@ export default function RootLayout({
                 </div>
                 <Link href="https://www.univ-tln.fr" target="_blank">
                   <img 
-                    src="/images/logos/logoutln\.png" 
+                    src="/images/logos/logoutln.png" 
                     alt="Université de Toulon" 
                     className="h-10 w-auto"
                   />
@@ -124,7 +124,7 @@ export default function RootLayout({
                   <div className="mb-3">
                     <Link href="/">
                       <img 
-                        src="/images/logos/logoseatech\.png" 
+                        src="/images/logos/logoseatech.png" 
                         alt="SeaTech" 
                         className="h-12 w-auto"
                       />
@@ -135,14 +135,14 @@ export default function RootLayout({
                   <div className="flex space-x-3">
                     <Link href="https://www.grenoble-inp.fr" target="_blank" rel="noopener noreferrer">
                       <img 
-                        src="/images/logos/grenobleinp\.png" 
+                        src="/images/logos/grenobleinp.png" 
                         alt="Grenoble INP" 
                         className="h-10 w-auto hover:opacity-80 transition-opacity"
                       />
                     </Link>
                     <Link href="https://www.groupe-inp.fr" target="_blank" rel="noopener noreferrer">
                       <img 
-                        src="/images/logos/groupeinp\.png" 
+                        src="/images/logos/groupeinp.png" 
                         alt="Groupe INP" 
                         className="h-10 w-auto hover:opacity-80 transition-opacity"
                       />
@@ -194,7 +194,7 @@ export default function RootLayout({
               <div className="flex-shrink-0">
                 <Link href="https://www.univ-tln.fr" target="_blank" className="flex items-center">
                   <img 
-                    src="/images/logos/logoutln\.png" 
+                    src="/images/logos/logoutln.png" 
                     alt="Université de Toulon" 
                     className="h-16 w-auto hover:opacity-80 transition-opacity"
                   />
@@ -273,31 +273,31 @@ export default function RootLayout({
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-center items-center gap-2 sm:gap-3 lg:gap-4 min-w-max">
                 <Link href="http://www.cti-commission.fr/" target="_blank" className="opacity-70 hover:opacity-100 transition-opacity flex-shrink-0 w-12 sm:w-16 lg:w-20 flex justify-center">
-                  <img src="/images/logos/partenaires/cti\.png" alt="CTI" className="h-8 sm:h-10 lg:h-12 object-contain max-w-full" />
+                  <img src="/images/logos/partenaires/cti.png" alt="CTI" className="h-8 sm:h-10 lg:h-12 object-contain max-w-full" />
                 </Link>
                 <Link href="http://eurace.enaee.eu/" target="_blank" className="opacity-70 hover:opacity-100 transition-opacity flex-shrink-0 w-12 sm:w-16 lg:w-20 flex justify-center">
-                  <img src="/images/logos/partenaires/enaee\.png" alt="EURACE" className="h-8 sm:h-10 lg:h-12 object-contain max-w-full" />
+                  <img src="/images/logos/partenaires/enaee.png" alt="EURACE" className="h-8 sm:h-10 lg:h-12 object-contain max-w-full" />
                 </Link>
                 <Link href="http://ccp.scei-concours.fr/" target="_blank" className="opacity-70 hover:opacity-100 transition-opacity flex-shrink-0 w-12 sm:w-16 lg:w-20 flex justify-center">
-                  <img src="/images/logos/partenaires/ccinp\.png" alt="CCINP" className="h-8 sm:h-10 lg:h-12 object-contain max-w-full" />
+                  <img src="/images/logos/partenaires/ccinp.png" alt="CCINP" className="h-8 sm:h-10 lg:h-12 object-contain max-w-full" />
                 </Link>
                 <Link href="http://www.polymeca.org/" target="_blank" className="opacity-70 hover:opacity-100 transition-opacity flex-shrink-0 w-12 sm:w-16 lg:w-20 flex justify-center">
-                  <img src="/images/logos/partenaires/polymeca\.png" alt="POLYMECA" className="h-8 sm:h-10 lg:h-12 object-contain max-w-full" />
+                  <img src="/images/logos/partenaires/polymeca.png" alt="POLYMECA" className="h-8 sm:h-10 lg:h-12 object-contain max-w-full" />
                 </Link>
                 <Link href="http://www.cdefi.fr/" target="_blank" className="opacity-70 hover:opacity-100 transition-opacity flex-shrink-0 w-12 sm:w-16 lg:w-20 flex justify-center">
-                  <img src="/images/logos/partenaires/cdefi\.png" alt="CDEFI" className="h-8 sm:h-10 lg:h-12 object-contain max-w-full" />
+                  <img src="/images/logos/partenaires/cdefi.png" alt="CDEFI" className="h-8 sm:h-10 lg:h-12 object-contain max-w-full" />
                 </Link>
                 <Link href="http://www.cfa-epure.com/" target="_blank" className="opacity-70 hover:opacity-100 transition-opacity flex-shrink-0 w-12 sm:w-16 lg:w-20 flex justify-center">
-                  <img src="/images/logos/partenaires/formasup\.png" alt="CFA EPURE" className="h-8 sm:h-10 lg:h-12 object-contain max-w-full" />
+                  <img src="/images/logos/partenaires/formasup.png" alt="CFA EPURE" className="h-8 sm:h-10 lg:h-12 object-contain max-w-full" />
                 </Link>
                 <Link href="http://www.enseignementsup-recherche.gouv.fr/" target="_blank" className="opacity-70 hover:opacity-100 transition-opacity flex-shrink-0 w-12 sm:w-16 lg:w-20 flex justify-center">
-                  <img src="/images/logos/partenaires/mesr\.png" alt="MESR" className="h-8 sm:h-10 lg:h-12 object-contain max-w-full bg-white p-1 sm:p-2 rounded" />
+                  <img src="/images/logos/partenaires/mesr.png" alt="MESR" className="h-8 sm:h-10 lg:h-12 object-contain max-w-full bg-white p-1 sm:p-2 rounded" />
                 </Link>
                 <Link href="http://www.campusfrance.org/fr/" target="_blank" className="opacity-70 hover:opacity-100 transition-opacity flex-shrink-0 w-12 sm:w-16 lg:w-20 flex justify-center">
-                  <img src="/images/logos/partenaires/campus-france\.png" alt="Campus France" className="h-8 sm:h-10 lg:h-12 object-contain max-w-full bg-white p-1 sm:p-2 rounded" />
+                  <img src="/images/logos/partenaires/campus-france.png" alt="Campus France" className="h-8 sm:h-10 lg:h-12 object-contain max-w-full bg-white p-1 sm:p-2 rounded" />
                 </Link>
                 <div className="opacity-70 flex-shrink-0 w-12 sm:w-16 lg:w-20 flex justify-center">
-                  <img src="/images/logos/partenaires/labellisation-ecole-ingenieurs\.png" alt="Labellisation École Ingénieurs" className="h-8 sm:h-10 lg:h-12 object-contain max-w-full" />
+                  <img src="/images/logos/partenaires/labellisation-ecole-ingenieurs.png" alt="Labellisation École Ingénieurs" className="h-8 sm:h-10 lg:h-12 object-contain max-w-full" />
                 </div>
               </div>
             </div>
