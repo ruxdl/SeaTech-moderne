@@ -1,0 +1,17 @@
+📸 DOSSIER CAROUSEL D'IMAGES ��
+
+Comment utiliser ce dossier :
+=============================
+
+1. Déposez simplement vos images ici
+2. Formats supportés : .jpg, .jpeg, .png, .webp, .gif  
+3. Le site détecte automatiquement toutes les images
+4. Aucune configuration nécessaire !
+
+Exemples de noms d'images :
+- seatech-campus.jpg
+- laboratoire.png
+- etudiants.webp
+- formation.jpeg
+
+Le carrousel s'actualise automatiquement dès que vous ajoutez/supprimez des images.
