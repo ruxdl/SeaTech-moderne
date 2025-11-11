@@ -184,7 +184,7 @@ export default function Home() {
               <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
                 Formation généraliste avec 6 parcours spécialisés pour répondre aux défis technologiques actuels.
               </p>
-              <Link href="/formation" className="text-blue-600 hover:text-green-600 font-semibold text-sm sm:text-base transition-colors">
+              <Link href="/pages/special/diplome-general" className="text-blue-600 hover:text-green-600 font-semibold text-sm sm:text-base transition-colors">
                 En savoir plus →
               </Link>
             </div>
@@ -197,7 +197,7 @@ export default function Home() {
               <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
                 Formation par apprentissage dans le domaine des matériaux et de leurs applications industrielles.
               </p>
-              <Link href="/formation" className="text-green-600 hover:text-blue-600 font-semibold text-sm sm:text-base transition-colors">
+              <Link href="/pages/special/specialite-materiaux" className="text-green-600 hover:text-blue-600 font-semibold text-sm sm:text-base transition-colors">
                 En savoir plus →
               </Link>
             </div>
@@ -210,7 +210,7 @@ export default function Home() {
               <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4">
                 Formation par apprentissage dans les systèmes numériques et les nouvelles technologies.
               </p>
-              <Link href="/formation" className="text-green-600 hover:text-blue-600 font-semibold text-sm sm:text-base transition-colors">
+              <Link href="/pages/special/specialite-systemes-numeriques" className="text-green-600 hover:text-blue-600 font-semibold text-sm sm:text-base transition-colors">
                 En savoir plus →
               </Link>
             </div>
