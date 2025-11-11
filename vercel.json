@@ -3,12 +3,5 @@
   "framework": "nextjs",
   "buildCommand": "npm run build",
   "outputDirectory": ".next",
-  "installCommand": "npm install",
-  "functions": {},
-  "routes": [
-    {
-      "src": "/pages/special/(.*)",
-      "dest": "/pages/special/$1"
-    }
-  ]
+  "installCommand": "npm install"
 }
