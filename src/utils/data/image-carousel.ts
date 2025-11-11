@@ -2,16 +2,18 @@
 // Déposez simplement vos images dans le dossier: public/images/carousel/
 // Le système détecte automatiquement toutes les images !
 
+import { getImagePath } from '../image-path';
+
 // Images du carrousel - directement configurées
 export const defaultCarouselImages = [
   {
     id: 1,
-    src: '/images/carousel/banniere-seatech-960x350.jpg',
+    src: getImagePath('/images/carousel/banniere-seatech-960x350.jpg'),
     alt: 'Bannière SeaTech'
   },
   {
     id: 2,
-    src: '/images/carousel/photo_21792.webp',
+    src: getImagePath('/images/carousel/photo_21792.webp'),
     alt: 'Campus SeaTech'
   }
 ];

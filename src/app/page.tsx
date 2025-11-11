@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { fetchCarouselImages, defaultCarouselImages } from '@/utils/data/image-carousel';
+import { getImagePath } from '@/utils/image-path';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -89,7 +90,7 @@ export default function Home() {
             <div className="bg-gradient-to-b from-white to-blue-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
               <div className="h-40 sm:h-48 overflow-hidden">
                 <img 
-                  src="/images/photos/b1.png" 
+                  src={getImagePath("/images/photos/b1\.png")} 
                   alt="Devenir Ingénieur à SeaTech" 
                   className="w-full h-full object-cover"
                 />
@@ -115,7 +116,7 @@ export default function Home() {
             <div className="bg-gradient-to-b from-white to-green-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
               <div className="h-40 sm:h-48 overflow-hidden">
                 <img 
-                  src="/images/photos/b2.png" 
+                  src={getImagePath("/images/photos/b2\.png")} 
                   alt="Partenaires & Entreprises" 
                   className="w-full h-full object-cover"
                 />
@@ -141,7 +142,7 @@ export default function Home() {
             <div className="bg-gradient-to-b from-white to-blue-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 md:col-span-2 lg:col-span-1">
               <div className="h-40 sm:h-48 overflow-hidden">
                 <img 
-                  src="/images/photos/b3.png" 
+                  src={getImagePath("/images/photos/b3\.png")} 
                   alt="Vie Étudiante" 
                   className="w-full h-full object-cover"
                 />
