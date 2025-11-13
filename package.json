@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:watch": "concurrently \"npm run dev\" \"npm run watch:images\"",
+    "watch:images": "node scripts/watch-images.js",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
@@ -20,6 +22,8 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "babel-plugin-react-compiler": "1.0.0",
+    "chokidar": "^4.0.3",
+    "concurrently": "^9.2.1",
     "eslint": "^9",
     "eslint-config-next": "16.0.1",
     "tailwindcss": "^4",

@@ -82,8 +82,8 @@ export default function Home() {
 
       {/* Trois blocs principaux */}
       <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-blue-50 via-green-50 to-blue-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-10 2xl:gap-12 max-w-none">
             
             {/* Bloc 1 : Devenir Ingénieur */}
             <div className="bg-gradient-to-b from-white to-blue-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
@@ -169,13 +169,13 @@ export default function Home() {
 
       {/* Three Diplomas Section */}
       <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-b from-white to-green-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">Trois Diplômes d'Ingénieur</h2>
+        <div className="max-w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16">
+          <div className="text-center mb-6 sm:mb-8 lg:mb-10">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-3">Trois Diplômes d'Ingénieur</h2>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600">Des formations d'excellence reconnues par la CTI</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 xl:gap-10 2xl:gap-12 max-w-none">
             <div className="bg-gradient-to-br from-blue-50 to-blue-200 rounded-xl p-4 sm:p-6 lg:p-8 hover:shadow-lg transition-all duration-300 hover:scale-105 border border-blue-200">
               <div className="h-10 w-10 sm:h-12 sm:w-12 bg-blue-600 rounded-lg mb-3 sm:mb-4 flex items-center justify-center">
                 <span className="text-white font-bold text-lg sm:text-xl">🎓</span>

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import NavigationMenu from "../components/NavigationMenu";
+import SearchBar from "../components/SearchBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,233 +35,137 @@ export default function RootLayout({
     <html lang="fr">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
         {/* Header */}
-        <header className="bg-gradient-to-r from-blue-50 to-green-50 shadow-md border-b-2 border-blue-600">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <header className="bg-gradient-to-r from-blue-50 to-green-50 shadow-sm border-b border-blue-200">
+          {/* Barre utilitaire - tout en haut */}
+          <div className="bg-gradient-to-r from-blue-100 to-green-100 relative z-10">
+            <div className="max-w-7xl mx-auto px-4 py-2">
+              <nav className="flex justify-center space-x-6 text-xs text-gray-700 relative z-10">
+                <Link href="/pages/special/depot-stage-emploi" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded">
+                  DÉPÔT STAGE/EMPLOI
+                </Link>
+                <Link href="https://cas.univ-tln.fr/cas/login?service=https%3A%2F%2Fidp.univ-tln.fr%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De2s1&entityId=https%3A%2F%2Fsp.partage.renater.fr%2Fseatech" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded">
+                  WEBMAIL
+                </Link>
+                <Link href="https://annuaire.univ-tln.fr/home" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded">
+                  ANNUAIRE
+                </Link>
+                <Link href="https://ent.univ-tln.fr" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded">
+                  ENT
+                </Link>
+                <Link href="https://cas.univ-tln.fr/cas/login?service=https%3A%2F%2Fged.univ-tln.fr%2Fnuxeo%2Fui%2F" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded">
+                  INTRANET
+                </Link>
+                <Link href="https://seatech.univ-tln.fr/output/" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded">
+                  VISITE VIRTUELLE
+                </Link>
+              </nav>
+            </div>
+          </div>
+
+          <div className="w-full">
             {/* Mobile Header */}
             <div className="md:hidden">
-              {/* Logos principaux */}
-              <div className="flex justify-between items-center py-3">
-                <div className="flex flex-col items-center">
+              <div className="flex items-center justify-between px-4 py-4">
+                {/* Logos groupés à gauche */}
+                <div className="flex items-center space-x-2">
                   <Link href="/">
                     <img 
                       src="/images/logos/logoseatech.png" 
                       alt="SeaTech" 
-                      className="h-8 w-auto mb-2"
+                      className="h-8 w-auto"
                     />
                   </Link>
-                  {/* Logos partenaires en mobile */}
-                  <div className="flex space-x-2">
-                    <Link href="https://www.grenoble-inp.fr" target="_blank" rel="noopener noreferrer">
-                      <img 
-                        src="/images/logos/grenobleinp.png" 
-                        alt="Grenoble INP" 
-                        className="h-6 w-auto hover:opacity-80 transition-opacity"
-                      />
-                    </Link>
-                    <Link href="https://www.groupe-inp.fr" target="_blank" rel="noopener noreferrer">
-                      <img 
-                        src="/images/logos/groupeinp.png" 
-                        alt="Groupe INP" 
-                        className="h-6 w-auto hover:opacity-80 transition-opacity"
-                      />
-                    </Link>
-                  </div>
-                </div>
-                <Link href="https://www.univ-tln.fr" target="_blank">
-                  <img 
-                    src="/images/logos/logoutln.png" 
-                    alt="Université de Toulon" 
-                    className="h-10 w-auto"
-                  />
-                </Link>
-              </div>
-
-              {/* Navigation rapide mobile */}
-              <div className="pb-2 overflow-x-auto">
-                <div className="flex space-x-3 min-w-max px-1">
-                  <Link href="/pages/special/depot-stage-emploi" className="text-blue-700 hover:text-green-600 transition-colors font-medium text-xs whitespace-nowrap py-1 px-2 bg-blue-100 hover:bg-green-100 rounded">
-                    DÉPÔT STAGE/EMPLOI
+                  <Link href="https://www.univ-tln.fr" target="_blank" rel="noopener noreferrer">
+                    <img 
+                      src="/images/logos/logoutln.png" 
+                      alt="Université de Toulon" 
+                      className="h-6 w-auto opacity-80"
+                    />
                   </Link>
-                  <Link href="https://cas.univ-tln.fr/cas/login?service=https%3A%2F%2Fidp.univ-tln.fr%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De2s1&entityId=https%3A%2F%2Fsp.partage.renater.fr%2Fseatech" target="_blank" className="text-green-700 hover:text-blue-600 transition-colors font-medium text-xs whitespace-nowrap py-1 px-2 bg-green-100 hover:bg-blue-100 rounded">
-                    WEBMAIL
+                  <Link href="https://www.groupe-inp.fr" target="_blank" rel="noopener noreferrer">
+                    <img 
+                      src="/images/logos/groupeinp.png" 
+                      alt="Groupe INP" 
+                      className="h-5 w-auto opacity-70"
+                    />
                   </Link>
-                  <Link href="https://annuaire.univ-tln.fr/home" target="_blank" className="text-blue-700 hover:text-green-600 transition-colors font-medium text-xs whitespace-nowrap py-1 px-2 bg-blue-100 hover:bg-green-100 rounded">
-                    ANNUAIRE
-                  </Link>
-                  <Link href="https://ent.univ-tln.fr" target="_blank" className="text-green-700 hover:text-blue-600 transition-colors font-medium text-xs whitespace-nowrap py-1 px-2 bg-green-100 hover:bg-blue-100 rounded">
-                    ENT
-                  </Link>
-                  <Link href="https://cas.univ-tln.fr/cas/login?service=https%3A%2F%2Fged.univ-tln.fr%2Fnuxeo%2Fui%2F" target="_blank" className="text-blue-700 hover:text-green-600 transition-colors font-medium text-xs whitespace-nowrap py-1 px-2 bg-blue-100 hover:bg-green-100 rounded">
-                    INTRANET
-                  </Link>
-                  <Link href="https://seatech.univ-tln.fr/output/" target="_blank" className="text-green-700 hover:text-blue-600 transition-colors font-medium text-xs whitespace-nowrap py-1 px-2 bg-green-100 hover:bg-blue-100 rounded">
-                    VISITE VIRTUELLE
+                  <Link href="https://www.grenoble-inp.fr" target="_blank" rel="noopener noreferrer">
+                    <img 
+                      src="/images/logos/grenobleinp.png" 
+                      alt="Grenoble INP" 
+                      className="h-5 w-auto opacity-70"
+                    />
                   </Link>
                 </div>
+                <NavigationMenu />
               </div>
 
               {/* Mobile Search */}
-              <div className="pb-3">
-                <div className="relative">
-                  <input
-                    type="search"
-                    placeholder="Rechercher..."
-                    className="w-full px-3 py-2 pl-8 pr-4 text-sm text-gray-700 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                  <div className="absolute inset-y-0 left-0 flex items-center pl-2">
-                    <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                    </svg>
-                  </div>
-                </div>
+              <div className="px-4 pb-4">
+                <SearchBar placeholder="Rechercher..." />
               </div>
             </div>
 
             {/* Desktop Header */}
-            <div className="hidden md:flex justify-between items-center py-4">
-              {/* Logo principal et logos partenaires */}
-              <div className="flex-shrink-0">
-                <div className="flex flex-col items-center">
-                  {/* Logo principal horizontal */}
-                  <div className="mb-3">
-                    <Link href="/">
-                      <img 
-                        src="/images/logos/logoseatech.png" 
-                        alt="SeaTech" 
-                        className="h-12 w-auto"
-                      />
-                    </Link>
+            <div className="hidden md:block">
+              <div className="py-6 px-4 sm:px-6 lg:px-8">
+                <div className="flex items-start justify-between w-full">
+                  {/* Section gauche - Logos (collée au bord gauche) */}
+                  <div className="flex flex-col">
+                    {/* Logos principaux (grands) */}
+                    <div className="flex items-center space-x-4 mb-3">
+                      <Link href="/">
+                        <img 
+                          src="/images/logos/logoseatech.png" 
+                          alt="SeaTech" 
+                          className="h-16 w-auto hover:opacity-90 transition-opacity"
+                        />
+                      </Link>
+                      <Link href="https://www.univ-tln.fr" target="_blank" rel="noopener noreferrer">
+                        <img 
+                          src="/images/logos/logoutln.png" 
+                          alt="Université de Toulon" 
+                          className="h-16 w-auto hover:opacity-90 transition-opacity"
+                        />
+                      </Link>
+                    </div>
+                    
+                    {/* Logos secondaires (petits) */}
+                    <div className="flex items-center space-x-3">
+                      <Link href="https://www.groupe-inp.fr" target="_blank" rel="noopener noreferrer">
+                        <img 
+                          src="/images/logos/groupeinp.png" 
+                          alt="Groupe INP" 
+                          className="h-8 w-auto hover:opacity-80 transition-opacity"
+                        />
+                      </Link>
+                      <Link href="https://www.grenoble-inp.fr" target="_blank" rel="noopener noreferrer">
+                        <img 
+                          src="/images/logos/grenobleinp.png" 
+                          alt="Grenoble INP" 
+                          className="h-8 w-auto hover:opacity-80 transition-opacity"
+                        />
+                      </Link>
+                    </div>
                   </div>
-                  
-                  {/* Logos carrés partenaires */}
-                  <div className="flex space-x-3">
-                    <Link href="https://www.grenoble-inp.fr" target="_blank" rel="noopener noreferrer">
-                      <img 
-                        src="/images/logos/grenobleinp.png" 
-                        alt="Grenoble INP" 
-                        className="h-10 w-auto hover:opacity-80 transition-opacity"
-                      />
-                    </Link>
-                    <Link href="https://www.groupe-inp.fr" target="_blank" rel="noopener noreferrer">
-                      <img 
-                        src="/images/logos/groupeinp.png" 
-                        alt="Groupe INP" 
-                        className="h-10 w-auto hover:opacity-80 transition-opacity"
-                      />
-                    </Link>
+
+                  {/* Section droite - Recherche et Menu (collée à droite) */}
+                  <div className="flex flex-col items-end space-y-4">
+                    {/* Barre de recherche élargie */}
+                    <SearchBar className="w-96" placeholder="Rechercher sur le site..." />
+                    
+                    {/* Menu déroulant */}
+                    <div>
+                      <NavigationMenu />
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Section centrale : Navigation + Recherche */}
-              <div className="flex-1 max-w-4xl mx-8">
-                {/* Navigation rapide */}
-                <nav className="flex justify-center space-x-4 mb-3 flex-wrap">
-                  <Link href="/pages/special/depot-stage-emploi" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm whitespace-nowrap">
-                    DÉPÔT STAGE/EMPLOI
-                  </Link>
-                  <Link href="https://cas.univ-tln.fr/cas/login?service=https%3A%2F%2Fidp.univ-tln.fr%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De2s1&entityId=https%3A%2F%2Fsp.partage.renater.fr%2Fseatech" target="_blank" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm whitespace-nowrap">
-                    WEBMAIL
-                  </Link>
-                  <Link href="https://annuaire.univ-tln.fr/home" target="_blank" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm whitespace-nowrap">
-                    ANNUAIRE
-                  </Link>
-                  <Link href="https://ent.univ-tln.fr" target="_blank" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm whitespace-nowrap">
-                    ENT
-                  </Link>
-                  <Link href="https://cas.univ-tln.fr/cas/login?service=https%3A%2F%2Fged.univ-tln.fr%2Fnuxeo%2Fui%2F" target="_blank" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm whitespace-nowrap">
-                    INTRANET
-                  </Link>
-                  <Link href="https://seatech.univ-tln.fr/output/" target="_blank" className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-sm whitespace-nowrap">
-                    VISITE VIRTUELLE
-                  </Link>
-                </nav>
-                
-                {/* Barre de recherche */}
-                <div className="relative">
-                  <input
-                    type="search"
-                    placeholder="Rechercher sur le site..."
-                    className="w-full px-4 py-2 pl-10 pr-4 text-gray-700 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  />
-                  <div className="absolute inset-y-0 left-0 flex items-center pl-3">
-                    <svg className="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m21 21-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              {/* Logo droite */}
-              <div className="flex-shrink-0">
-                <Link href="https://www.univ-tln.fr" target="_blank" className="flex items-center">
-                  <img 
-                    src="/images/logos/logoutln.png" 
-                    alt="Université de Toulon" 
-                    className="h-16 w-auto hover:opacity-80 transition-opacity"
-                  />
-                </Link>
               </div>
             </div>
           </div>
         </header>
 
-        {/* Bandeau de navigation principal */}
-        <div className="bg-gradient-to-r from-blue-800 via-blue-700 to-green-700 text-white py-3">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            {/* Mobile Navigation - Horizontal Scroll */}
-            <nav className="md:hidden overflow-x-auto">
-              <div className="flex space-x-6 min-w-max px-2">
-                <Link href="/pages/ecole" className="text-sm text-white hover:text-green-200 transition-colors font-medium whitespace-nowrap py-1">
-                  L'ÉCOLE
-                </Link>
-                <Link href="/pages/formation" className="text-sm text-white hover:text-blue-200 transition-colors font-medium whitespace-nowrap py-1">
-                  DEVENIR INGÉNIEUR
-                </Link>
-                <Link href="/pages/international" className="text-sm text-white hover:text-green-200 transition-colors font-medium whitespace-nowrap py-1">
-                  INTERNATIONAL
-                </Link>
-                <Link href="/pages/entreprises" className="text-sm text-white hover:text-blue-200 transition-colors font-medium whitespace-nowrap py-1">
-                  ENTREPRISES
-                </Link>
-                <Link href="/pages/recherche" className="text-sm text-white hover:text-green-200 transition-colors font-medium whitespace-nowrap py-1">
-                  RECHERCHE
-                </Link>
-                <Link href="/pages/actualites" className="text-sm text-white hover:text-blue-200 transition-colors font-medium whitespace-nowrap py-1">
-                  ACTUALITÉS
-                </Link>
-                <Link href="/pages/seminaires" className="text-sm text-white hover:text-green-200 transition-colors font-medium whitespace-nowrap py-1">
-                  SÉMINAIRES
-                </Link>
-              </div>
-            </nav>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex justify-center space-x-8 flex-wrap">
-              <Link href="/pages/ecole" className="text-base text-white hover:text-green-200 transition-colors font-medium px-2 py-1">
-                L'ÉCOLE
-              </Link>
-              <Link href="/pages/formation" className="text-base text-white hover:text-blue-200 transition-colors font-medium px-2 py-1">
-                DEVENIR INGÉNIEUR
-              </Link>
-              <Link href="/pages/international" className="text-base text-white hover:text-green-200 transition-colors font-medium px-2 py-1">
-                INTERNATIONAL
-              </Link>
-              <Link href="/pages/entreprises" className="text-base text-white hover:text-blue-200 transition-colors font-medium px-2 py-1">
-                ENTREPRISES
-              </Link>
-              <Link href="/pages/recherche" className="text-base text-white hover:text-green-200 transition-colors font-medium px-2 py-1">
-                RECHERCHE
-              </Link>
-              <Link href="/pages/actualites" className="text-base text-white hover:text-blue-200 transition-colors font-medium px-2 py-1">
-                ACTUALITÉS
-              </Link>
-              <Link href="/pages/seminaires" className="text-base text-white hover:text-green-200 transition-colors font-medium px-2 py-1">
-                SÉMINAIRES
-              </Link>
-            </nav>
-          </div>
-        </div>
 
         {/* Contenu principal */}
         <main className="flex-1">
