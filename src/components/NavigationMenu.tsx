@@ -80,14 +80,6 @@ export default function NavigationMenu() {
           </p>
         </div>
       </div>
-
-      {/* Backdrop for mobile only */}
-      {isOpen && (
-        <div 
-          className="fixed inset-0 bg-black bg-opacity-25 z-[9998] md:hidden"
-          onClick={() => setIsOpen(false)}
-        />
-      )}
     </div>
   );
 }
