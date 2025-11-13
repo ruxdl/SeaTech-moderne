@@ -300,19 +300,19 @@ export default function Home() {
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 text-center lg:text-left">Chiffres Clés</h3>
               <div className="grid grid-cols-2 gap-4 sm:gap-6">
                 <div className="text-center p-2 bg-blue-50 rounded-lg">
-                  <div className="text-2xl sm:text-3xl font-bold text-blue-600">95%</div>
-                  <div className="text-xs sm:text-sm text-gray-600">Taux d'insertion</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-blue-600">87,9%</div>
+                  <div className="text-xs sm:text-sm text-gray-600">Taux net d'emploi</div>
                 </div>
                 <div className="text-center p-2 bg-green-50 rounded-lg">
                   <div className="text-2xl sm:text-3xl font-bold text-green-600">6</div>
                   <div className="text-xs sm:text-sm text-gray-600">Parcours de formation</div>
                 </div>
                 <div className="text-center p-2 bg-blue-50 rounded-lg">
-                  <div className="text-2xl sm:text-3xl font-bold text-blue-600">200+</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-blue-600">???+</div>
                   <div className="text-xs sm:text-sm text-gray-600">Entreprises partenaires</div>
                 </div>
                 <div className="text-center p-2 bg-green-50 rounded-lg">
-                  <div className="text-2xl sm:text-3xl font-bold text-green-600">30+</div>
+                  <div className="text-2xl sm:text-3xl font-bold text-green-600">25+</div>
                   <div className="text-xs sm:text-sm text-gray-600">Pays d'échange</div>
                 </div>
               </div>
