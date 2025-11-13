@@ -39,25 +39,50 @@ export default function RootLayout({
           {/* Barre utilitaire - tout en haut */}
           <div className="bg-gradient-to-r from-blue-100 to-green-100 relative z-10">
             <div className="max-w-7xl mx-auto px-4 py-2">
-              <nav className="flex justify-center space-x-6 text-xs text-gray-700 relative z-10">
-                <Link href="/pages/special/depot-stage-emploi" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded">
+              {/* Version desktop - centrée */}
+              <nav className="hidden md:flex justify-center space-x-6 text-xs text-gray-700 relative z-10">
+                <Link href="/pages/special/depot-stage-emploi" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded whitespace-nowrap">
                   DÉPÔT STAGE/EMPLOI
                 </Link>
-                <Link href="https://cas.univ-tln.fr/cas/login?service=https%3A%2F%2Fidp.univ-tln.fr%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De2s1&entityId=https%3A%2F%2Fsp.partage.renater.fr%2Fseatech" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded">
+                <Link href="https://cas.univ-tln.fr/cas/login?service=https%3A%2F%2Fidp.univ-tln.fr%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De2s1&entityId=https%3A%2F%2Fsp.partage.renater.fr%2Fseatech" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded whitespace-nowrap">
                   WEBMAIL
                 </Link>
-                <Link href="https://annuaire.univ-tln.fr/home" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded">
+                <Link href="https://annuaire.univ-tln.fr/home" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded whitespace-nowrap">
                   ANNUAIRE
                 </Link>
-                <Link href="https://ent.univ-tln.fr" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded">
+                <Link href="https://ent.univ-tln.fr" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded whitespace-nowrap">
                   ENT
                 </Link>
-                <Link href="https://cas.univ-tln.fr/cas/login?service=https%3A%2F%2Fged.univ-tln.fr%2Fnuxeo%2Fui%2F" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded">
+                <Link href="https://cas.univ-tln.fr/cas/login?service=https%3A%2F%2Fged.univ-tln.fr%2Fnuxeo%2Fui%2F" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded whitespace-nowrap">
                   INTRANET
                 </Link>
-                <Link href="https://seatech.univ-tln.fr/output/" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded">
+                <Link href="https://seatech.univ-tln.fr/output/" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded whitespace-nowrap">
                   VISITE VIRTUELLE
                 </Link>
+              </nav>
+              
+              {/* Version mobile - défilement horizontal */}
+              <nav className="md:hidden overflow-x-auto scrollbar-hide">
+                <div className="flex space-x-4 text-xs text-gray-700 pb-1" style={{minWidth: 'max-content'}}>
+                  <Link href="/pages/special/depot-stage-emploi" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded whitespace-nowrap">
+                    DÉPÔT STAGE/EMPLOI
+                  </Link>
+                  <Link href="https://cas.univ-tln.fr/cas/login?service=https%3A%2F%2Fidp.univ-tln.fr%2Fidp%2FAuthn%2FExtCas%3Fconversation%3De2s1&entityId=https%3A%2F%2Fsp.partage.renater.fr%2Fseatech" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded whitespace-nowrap">
+                    WEBMAIL
+                  </Link>
+                  <Link href="https://annuaire.univ-tln.fr/home" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded whitespace-nowrap">
+                    ANNUAIRE
+                  </Link>
+                  <Link href="https://ent.univ-tln.fr" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded whitespace-nowrap">
+                    ENT
+                  </Link>
+                  <Link href="https://cas.univ-tln.fr/cas/login?service=https%3A%2F%2Fged.univ-tln.fr%2Fnuxeo%2Fui%2F" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded whitespace-nowrap">
+                    INTRANET
+                  </Link>
+                  <Link href="https://seatech.univ-tln.fr/output/" target="_blank" className="hover:text-blue-700 hover:bg-white/50 transition-all duration-200 py-1 px-2 rounded whitespace-nowrap">
+                    VISITE VIRTUELLE
+                  </Link>
+                </div>
               </nav>
             </div>
           </div>
@@ -65,43 +90,51 @@ export default function RootLayout({
           <div className="w-full">
             {/* Mobile Header */}
             <div className="md:hidden">
-              <div className="flex items-center justify-between px-4 py-4">
-                {/* Logos groupés à gauche */}
-                <div className="flex items-center space-x-2">
-                  <Link href="/">
-                    <img 
-                      src="/images/logos/logoseatech.png" 
-                      alt="SeaTech" 
-                      className="h-8 w-auto"
-                    />
-                  </Link>
-                  <Link href="https://www.univ-tln.fr" target="_blank" rel="noopener noreferrer">
-                    <img 
-                      src="/images/logos/logoutln.png" 
-                      alt="Université de Toulon" 
-                      className="h-6 w-auto opacity-80"
-                    />
-                  </Link>
-                  <Link href="https://www.groupe-inp.fr" target="_blank" rel="noopener noreferrer">
-                    <img 
-                      src="/images/logos/groupeinp.png" 
-                      alt="Groupe INP" 
-                      className="h-5 w-auto opacity-70"
-                    />
-                  </Link>
-                  <Link href="https://www.grenoble-inp.fr" target="_blank" rel="noopener noreferrer">
-                    <img 
-                      src="/images/logos/grenobleinp.png" 
-                      alt="Grenoble INP" 
-                      className="h-5 w-auto opacity-70"
-                    />
-                  </Link>
+              <div className="flex items-start justify-between px-4 py-4 relative">
+                {/* Logos groupés à gauche avec plus d'espace */}
+                <div className="flex flex-col space-y-2 flex-1 min-w-0 pr-4">
+                  <div className="flex items-center space-x-2 overflow-x-auto">
+                    <Link href="/" className="flex-shrink-0">
+                      <img 
+                        src="/images/logos/logoseatech.png" 
+                        alt="SeaTech" 
+                        className="h-8 w-auto"
+                      />
+                    </Link>
+                    <Link href="https://www.univ-tln.fr" target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
+                      <img 
+                        src="/images/logos/logoutln.png" 
+                        alt="Université de Toulon" 
+                        className="h-6 w-auto opacity-80"
+                      />
+                    </Link>
+                  </div>
+                  <div className="flex items-center space-x-2 overflow-x-auto">
+                    <Link href="https://www.groupe-inp.fr" target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
+                      <img 
+                        src="/images/logos/groupeinp.png" 
+                        alt="Groupe INP" 
+                        className="h-5 w-auto opacity-70"
+                      />
+                    </Link>
+                    <Link href="https://www.grenoble-inp.fr" target="_blank" rel="noopener noreferrer" className="flex-shrink-0">
+                      <img 
+                        src="/images/logos/grenobleinp.png" 
+                        alt="Grenoble INP" 
+                        className="h-5 w-auto opacity-70"
+                      />
+                    </Link>
+                  </div>
                 </div>
-                <NavigationMenu />
+                
+                {/* Menu à droite avec z-index ajusté */}
+                <div className="flex-shrink-0 relative" style={{zIndex: 1000}}>
+                  <NavigationMenu />
+                </div>
               </div>
 
-              {/* Mobile Search */}
-              <div className="px-4 pb-4">
+              {/* Mobile Search avec espacement */}
+              <div className="px-4 pb-4 pt-2">
                 <SearchBar placeholder="Rechercher..." />
               </div>
             </div>
